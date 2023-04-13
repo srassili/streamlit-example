@@ -76,5 +76,6 @@ def predict_CO2(modm, carburant, conso_mixte, puiss_admin):
 
 # Afficher la prédiction
 st.subheader('Résultat de la prédiction')
-prediction = predict_CO2(modm, carburant, conso_mixte, puiss_admin)
-st.write(f"La valeur prédite pour le CO2 est: {prediction:.2f} g/km")
+if st.button("Prédire"):
+    prediction = predict_CO2(modm, carburant, conso_mixte, puiss_admin)
+    st.write(f"La valeur prédite pour le CO2 est: {prediction:.2f} g/km")
